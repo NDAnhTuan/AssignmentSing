@@ -1,6 +1,6 @@
 FROM gradle:7.2.0-jdk17 AS build
 COPY . .
-RUN gradle clean build
+RUN gradle build
 
 FROM openjdk:17.0.1-jdk-slim
 
