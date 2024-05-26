@@ -1,4 +1,5 @@
 FROM gradle:7.2.0-jdk17 AS build
+WORKDIR /app
 COPY . .
 RUN gradle build
 
