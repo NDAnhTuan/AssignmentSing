@@ -1,4 +1,4 @@
-FROM gradle:3.8.5-openjdk-17 AS build
+FROM gradle:7.2.0-jdk17 AS build
 COPY . .
 RUN gradle clean package
 
