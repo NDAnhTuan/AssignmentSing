@@ -1,7 +1,6 @@
 FROM gradle:3.8.5-openjdk-17 AS build
-COPY --chown=gradle:gradle . /home/gradle/src
-WORKDIR /home/gradle/src
-RUN gradle build --no-daemon 
+COPY . .
+RUN gradle clean package
 
 FROM openjdk:17.0.1-jdk-slim
 
