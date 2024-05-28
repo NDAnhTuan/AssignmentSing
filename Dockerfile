@@ -1,10 +1,11 @@
-FROM gradle:7.2.0-jdk17 AS build
+FROM java:17
+ADD /build/libs/*.jar dockerapp.jar
 
 COPY . .
-
+EXPOSE 8080
 FROM openjdk:17.0.1-jdk-slim
 
-EXPOSE 8080
+
 
 
 
